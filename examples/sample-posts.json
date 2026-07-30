@@ -1,0 +1,38 @@
+[
+  {
+    "id": "demo-1",
+    "title": "Coming to Tirana next week, which local walking tour should I book?",
+    "body": "First time in Albania. I love alternative music and hidden cultural places.",
+    "author": "sample_traveller",
+    "community": "travel",
+    "url": "https://www.reddit.com/",
+    "createdAt": "2026-07-29T10:00:00.000Z"
+  },
+  {
+    "id": "demo-2",
+    "title": "Two-week Albania itinerary for September",
+    "body": "Planning a trip through Berat, Gjirokaster and the Riviera. What should I not miss?",
+    "author": "sample_planner",
+    "community": "solotravel",
+    "url": "https://www.reddit.com/",
+    "createdAt": "2026-07-28T12:00:00.000Z"
+  },
+  {
+    "id": "demo-3",
+    "title": "Historical question about Albania",
+    "body": "This is for a school project about politics.",
+    "author": "sample_student",
+    "community": "AskHistorians",
+    "url": "https://www.reddit.com/",
+    "createdAt": "2026-07-27T08:00:00.000Z"
+  },
+  {
+    "id": "demo-4",
+    "title": "Trip report: one month in Albania",
+    "body": "I already returned from Tirana and Shkoder. Here are my photos.",
+    "author": "sample_reporter",
+    "community": "travel",
+    "url": "https://www.reddit.com/",
+    "createdAt": "2026-06-01T08:00:00.000Z"
+  }
+]
