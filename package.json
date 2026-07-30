@@ -1,0 +1,28 @@
+{
+  "name": "albania-travel-radar",
+  "version": "0.1.0",
+  "description": "Privacy-friendly open-source travel-intent scoring for public Albania travel conversations.",
+  "type": "module",
+  "bin": {
+    "travel-radar": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "scan": "node src/cli.js scan examples/sample-posts.json",
+    "test": "node --test",
+    "check": "node --check src/cli.js && node --check src/scoring.js && node --check src/parsers.js && node --check src/reddit.js && node --check src/server.js && node --check web/app.js"
+  },
+  "keywords": [
+    "albania",
+    "travel",
+    "tourism",
+    "open-source",
+    "reddit",
+    "lead-scoring"
+  ],
+  "author": "Gjergj Mero",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
