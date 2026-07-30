@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Score public travel conversations for Albania tourism intent, locally in your browser."
+    />
+    <title>Albania Travel Radar</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+    <script type="module" src="/web/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Albania Travel Radar home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Albania Travel Radar</span>
+      </a>
+      <a
+        class="header-link"
+        href="https://github.com/merogjergj-sys/albania-travel-radar"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Open source
+        <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Open-source intent scoring</p>
+        <h1>Find the travel questions where a local can actually help.</h1>
+        <p class="hero-copy">
+          Paste exported public posts, set your threshold, and rank genuine Albania travel
+          intent. Everything runs inside your browser.
+        </p>
+        <div class="trust-row" aria-label="Project principles">
+          <span>No tracking</span>
+          <span>No data upload</span>
+          <span>Explainable scores</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-labelledby="workspace-title">
+        <div class="workspace-heading">
+          <div>
+            <p class="section-label">Signal scanner</p>
+            <h2 id="workspace-title">Turn conversations into a ranked radar</h2>
+          </div>
+          <button class="button button-secondary" id="load-sample" type="button">
+            Load sample data
+          </button>
+        </div>
+
+        <div class="input-grid">
+          <div class="field field-large">
+            <label for="json-input">Public post data</label>
+            <p class="field-help">
+              JSON array, <code>{ "posts": [] }</code>, or a Reddit listing response.
+            </p>
+            <textarea
+              id="json-input"
+              spellcheck="false"
+              placeholder='[{"title":"Coming to Tirana next week...","body":"What should I see?"}]'
+            ></textarea>
+            <label class="file-button" for="file-input">
+              <span>Choose JSON file</span>
+              <input id="file-input" type="file" accept=".json,application/json" />
+            </label>
+          </div>
+
+          <aside class="control-card">
+            <div class="field">
+              <div class="range-label">
+                <label for="threshold">Minimum score</label>
+                <output id="threshold-value" for="threshold">35</output>
+              </div>
+              <input id="threshold" type="range" min="0" max="90" step="5" value="35" />
+              <div class="range-scale" aria-hidden="true">
+                <span>Explore</span>
+                <span>High intent</span>
+              </div>
+            </div>
+
+            <div class="score-key">
+              <h3>How scoring works</h3>
+              <ul>
+                <li><span class="dot dot-red"></span>Albania destination</li>
+                <li><span class="dot dot-gold"></span>Planning language</li>
+                <li><span class="dot dot-blue"></span>Timing and freshness</li>
+                <li><span class="dot dot-gray"></span>Low-intent filters</li>
+              </ul>
+            </div>
+
+            <button class="button button-primary" id="scan-button" type="button">
+              Scan conversations
+            </button>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="results-section" id="results-section" hidden aria-labelledby="results-title">
+        <div class="results-header">
+          <div>
+            <p class="section-label">Ranked opportunities</p>
+            <h2 id="results-title">Your radar</h2>
+          </div>
+          <button class="button button-secondary" id="download-button" type="button">
+            Download CSV
+          </button>
+        </div>
+        <div class="summary-grid" id="summary"></div>
+        <div class="results-list" id="results"></div>
+      </section>
+
+      <section class="method">
+        <div>
+          <p class="section-label">Built for responsible outreach</p>
+          <h2>Help first. Sell never, unless invited.</h2>
+        </div>
+        <p>
+          The radar finds public questions worth answering. It does not collect private data,
+          automate messages, or encourage spam. Use it to contribute useful local knowledge.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built in Tirana for open-source tourism intelligence.</p>
+      <p>MIT licensed · v0.1.0</p>
+    </footer>
+  </body>
+</html>
